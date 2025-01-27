@@ -53,3 +53,13 @@
         transition: height 0.25s ease;
     }
 }
+
+//Check
+.check-item {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(10);
+    &::before {
+        font-size: toRem(20);
+    }
+}

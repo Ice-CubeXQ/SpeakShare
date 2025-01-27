@@ -1,23 +1,26 @@
-.tabs {
+.tabs-level {
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(15);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
 	}
 	// .tabs__title
 	&__title {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
-		border-radius: toRem(5);
-		&._tab-active {
-			border: 1px solid #000;
-		}
+		// &._tab-active {
+		// 	border: 1px solid #000;
+		// }
 	}
 	// .tabs__content
 	&__content {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
 	}
 	// .tabs__body
 	&__body {
+		background-color: #522b63;
+		border-radius: toRem(5);
+		@include adaptiveValue("padding", 50, 15);
 	}
 }
