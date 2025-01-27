@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"SpeakShare"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section data-prlx-parent class="page__main main">
+
+					<div data-prlx-parent class="main__bg background">
+						<div data-prlx data-axis="h" data-direction="1" data-coefficient="10" class="background__item background__item--stars">
+							<img data-prlx-mouse data-prlx-cy="400" data-prlx-cx="400" src="@img/bg/stars.png" alt="Image">
+						</div>
+						<div data-prlx data-direction="1" data-coefficient="10" class="background__item background__item--moon">
+							<img src="@img/bg/moon.png" alt="Image">
+						</div>
+
+						<div class="background__item background__item--mountains_behind">
+							<img src="@img/bg/mountains_behind.png" alt="Image">
+						</div>
+						<div class="background__item background__item--mountains_front">
+							<img src="@img/bg/mountains_front.png" alt="Image">
+						</div>
+
+					</div>
+
+					<h1 data-prlx data-direction="1" data-coefficient="30" class="main__title">Говорите на английском свободно!</h1>
+
+				</section>
+				<section class="page__promo promo">
+					<div class="promo__container">
+
+						<h2 data-watch data-watch-once class="promo__title">Вместе с нами</h2>
+
+						<div data-watch data-watch-once class="promo__info info-promo">
+							<div class="info-promo__item info-item">
+								<h3 class="info-item__title">Современные методики обучения</h3>
+								<p class="info-item__text">Программа адаптирована под ваши цели: путешествия, работа, экзамены. Интерактивные занятия и практика разговорной речи гарантируют результат.</p>
+							</div>
+							<div class="info-promo__item info-item">
+								<h3 class="info-item__title">Практика в реальных ситуациях</h3>
+								<p class="info-item__text">Сценарии занятий основаны на реальной жизни: вы научитесь общаться на деловых встречах, в путешествиях или повседневной жизни.</p>
+							</div>
+						</div>
+
+						<div data-watch data-watch-once class="promo__checks">
+							<div class="promo__check _icon-check">4-8 человек в группе</div>
+							<div class="promo__check _icon-check">Урок длиться 60 минут</div>
+							<div class="promo__check _icon-check">5 занятий в неделю</div>
+							<div class="promo__check _icon-check">От Beginner до Advanced</div>
+						</div>
+						<div data-watch data-watch-once class="promo__button">
+							<button class="button">Попробовать за 5$</button>
+						</div>
+					</div>
+				</section>
+
+				<section class="levels">
+					<div class="levels__container">
+						<h3 class="levels__title">Занятия для любого уровня</h3>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_preloader.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

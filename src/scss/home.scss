@@ -1,0 +1,203 @@
+.page {
+    // .page__main
+    &__main {
+    }
+    // .page__promo
+    &__promo {
+    }
+}
+//====================================================================================================
+
+.main {
+    position: relative;
+    // .main__bg
+    &__bg {
+    }
+
+    // .main__title
+    &__title {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        @include adaptiveValue("font-size", 35, 22);
+        font-weight: 700;
+    }
+}
+.background {
+    padding: toRem(100);
+    position: relative;
+    height: 100svh;
+    background: linear-gradient(#2b1055, #7597de);
+
+    // .background__item
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        // .background__item--stars
+        &--stars {
+        }
+        // .background__item--moon
+        &--moon {
+            mix-blend-mode: screen;
+            @include adaptiveValue("min-height", 1000, 1);
+        }
+        // .background__item--mountains_behind
+        &--mountains_behind {
+        }
+        // .background__item--mountains_front
+        &--mountains_front {
+        }
+    }
+}
+
+//====================================================================================================
+
+.promo {
+    background-color: #1c0522;
+    position: relative;
+    padding-top: toRem(30);
+    padding-bottom: toRem(80);
+    // .promo__container
+    &__container {
+    }
+
+    // .promo__title
+    &__title {
+        opacity: 0;
+        transform: translate(0px, 50%);
+
+        @include adaptiveValue("font-size", 35, 22);
+        font-weight: 700;
+        text-align: center;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 90, 25);
+        }
+        &._watcher-view {
+            transition: all 0.5s;
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+    }
+
+    // .promo__info
+    &__info {
+        opacity: 0;
+        transform: translate(0px, 50%);
+
+        &._watcher-view {
+            transition: all 0.5s 0.2s;
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(45);
+        }
+    }
+    // .promo__checks
+    &__checks {
+        display: grid;
+
+        column-gap: toRem(40);
+        row-gap: toRem(20);
+        justify-self: center;
+        @media (min-width: toEm(550)) {
+            grid-template-columns: repeat(4, 1fr);
+            @media (max-width: $tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(40);
+        }
+
+        opacity: 0;
+        transform: translate(0px, 50%);
+
+        &._watcher-view {
+            transition: all 0.5s 0.4s;
+            opacity: 1;
+            transform: translate(0px, 0px);
+        }
+    }
+    // .promo__check
+    &__check {
+        display: flex;
+        // justify-self: center;
+        // align-items: center;
+        column-gap: toRem(10);
+        &::before {
+            font-size: toRem(20);
+        }
+    }
+    // .promo__button
+    &__button {
+        font-size: toRem(18);
+        justify-self: center;
+        display: flex;
+        opacity: 0;
+        transform: translate(0px, 50%);
+        &._watcher-view {
+            transition: all 0.3s 0.6s;
+            opacity: 1;
+            transform: translate(0px, 0);
+        }
+    }
+}
+
+.info-promo {
+    display: grid;
+    @media (min-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    column-gap: toRem(15);
+    row-gap: toRem(40);
+    // .info-promo__item
+    &__item {
+    }
+}
+.info-item {
+    text-align: center;
+    border: 1px solid #f5f5f58e;
+    padding: 40px 20px;
+    position: relative;
+    // .info-item__title
+    &__title {
+        @media (min-width: toEm(550)) {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @media (max-width: toEm(550)) {
+            &:not(:last-child) {
+                margin-bottom: toRem(20);
+            }
+        }
+        background-color: #1c0522;
+        padding: 0 toRem(15);
+        font-size: toRem(20);
+        font-weight: 500;
+    }
+    // .info-item__text
+    &__text {
+        line-height: 1.4;
+    }
+}
+.check-item {
+}
+
+//========================================================================================================================================================
