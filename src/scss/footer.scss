@@ -1,3 +1,93 @@
 //====================================================================================================
 
+.footer {
+    background-color: #020202;
+    color: #777;
+    font-weight: 500;
+    padding-top: toRem(30);
+    padding-bottom: toRem(30);
+    // .footer__container
+    &__container {
+    }
+    // .footer__column
+    &__column {
+        display: flex;
+        @media (min-width: $mobile) {
+            justify-content: space-between;
+        }
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            row-gap: toRem(30);
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(40);
+        }
+    }
+    // .footer__conent
+    &__conent {
+        display: grid;
+        row-gap: toRem(20);
+    }
+    // .footer__logo
+    &__logo {
+        color: #fff;
+        @include adaptiveValue("font-size", 22, 18);
+        font-weight: 700;
+        letter-spacing: toRem(1);
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+    }
+    // .footer__text
+    &__text {
+        @media (min-width: $mobile) {
+            max-width: toRem(500);
+        }
+        line-height: 1.3;
+    }
+    // .footer__contacts
+    &__contacts {
+        display: grid;
+        row-gap: toRem(10);
+
+        @media (min-width: $mobile) {
+            justify-items: end;
+            align-self: start;
+        }
+    }
+    // .footer__social
+    &__social {
+        display: flex;
+        gap: toRem(15);
+    }
+    // .footer__link
+    &__link {
+        transition: color 0.3s;
+        &::before {
+            transition:
+                color 0.3s,
+                transform 0.5s;
+            color: #777;
+            font-size: toRem(30);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+                // color: #e42c64;
+                &::before {
+                    // color: #e42c64;
+                    transform: rotate(-360deg);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // .footer__copyright
+    &__copyright {
+        border-top: 1px solid #333;
+        padding-top: toRem(20);
+        text-align: center;
+    }
+}
+
 //====================================================================================================

@@ -7,7 +7,7 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section data-prlx-parent class="page__main main">
+				<section data-watch data-prlx-parent class="page__main main">
 
 					<div data-prlx-parent class="main__bg background">
 						<div data-prlx data-axis="h" data-direction="1" data-coefficient="10" class="background__item background__item--stars">
@@ -29,7 +29,8 @@
 					<h1 data-prlx data-direction="1" data-coefficient="30" class="main__title">Говорите на английском свободно!</h1>
 
 				</section>
-				<section class="page__promo promo">
+
+				<section id="promo" class="page__promo promo">
 					<div class="promo__container">
 
 						<h2 data-watch data-watch-once class="promo__title">Вместе с нами</h2>
@@ -57,11 +58,11 @@
 					</div>
 				</section>
 
-				<section class="levels">
+				<section class="page__levels levels">
 					<div class="levels__container">
-						<h3 class="levels__title">Занятия для любого уровня</h3>
+						<h3 data-watch data-watch-once class="levels__title">Занятия для любого уровня</h3>
 						<div data-tabs="768" data-tabs-animate="1000" class="levels__tabs tabs-level">
-							<nav data-tabs-titles class="tabs-level__navigation">
+							<nav data-watch data-watch-once data-tabs-titles class="tabs-level__navigation">
 								<button type="button" class="tabs-level__title tabs-button _icon-chevron _tab-active">
 									<span class="tabs-button__title">Начальный</span>
 									<span class="tabs-button__level">Beginner/Elementary</span>
@@ -75,7 +76,7 @@
 									<span class="tabs-button__level">Upper-intermediate/Advanced</span>
 								</button>
 							</nav>
-							<div data-tabs-body class="tabs-level__content">
+							<div data-watch data-watch-once data-tabs-body class="tabs-level__content">
 								<div class="tabs-level__body ">
 									<div class="tab-body">
 										<div class="tab-body__info">
@@ -129,6 +130,180 @@
 						</div>
 					</div>
 				</section>
+
+				<section class="page__faq faq">
+					<div class="faq__container">
+						<h3 class="faq__title">Часто задаваемые вопросы</h3>
+						<div data-spollers class="faq__spollers spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title">Как быть, если я плохо знаю английский?</summary>
+								<div class="spollers__body">
+									<p>Записывайтесь на занятия для начального уровня (Beginner и Elementary). На таких уроках участники, как и вы, только начинают учить английский.</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Мне придется делать домашку?</summary>
+								<div class="spollers__body">
+									<p>К большинству занятий мы готовим задания для дополнительной практики, чтобы вы могли проработать тему самостоятельно. Делайте их по желанию.</p>
+									<p>Кроме того, у вас сохранятся все материалы урока. Вы сможете их использовать, чтобы повторить тему и еще раз выполнить упражнения, которые были на уроке.</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Можно ли посещать групповые занятия детям и подросткам?</summary>
+								<div class="spollers__body">
+									<p>Посещать разговорный клуб SpeakShare можно с 16 лет. Мы стараемся, чтобы участникам занятий было максимально комфортно и интересно друг с другом. Ограничение по возрасту помогает нам достичь этой цели.</p>
+
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Преподаватель будет исправлять мои ошибки?</summary>
+								<div class="spollers__body">
+									<p>Преподаватель будет помогать вам отвечать правильно, подсказывая и направляя к верному ответу.</p>
+									<p>В конце урока вы обязательно разберете самые распространенные ошибки, которые допустили участники встречи.</p>
+								</div>
+							</details>
+						</div>
+					</div>
+				</section>
+
+				<!-- <section class="page__schedule schedule">
+					<div class="schedule__container">
+						<h4 class="schedule__title">7+ занятий в неделю</h4>
+						<h5 class="schedule__subtitle">Регистрируйтесь и посещяйте встречи в удобное для вас время</h5>
+
+						<div data-tabs class="schedule-tabs">
+							<nav data-tabs-titles class="schedule-tabs__navigation">
+								<button type="button" class="schedule-tabs__title _tab-active">Пн, 27.01</button>
+								<button type="button" class="schedule-tabs__title">Вт, 28.01</button>
+								<button type="button" class="schedule-tabs__title">Ср, 29.01</button>
+								<button type="button" class="schedule-tabs__title">Чт, 30.01</button>
+								<button type="button" class="schedule-tabs__title">Пт, 31.01</button>
+								<button type="button" class="schedule-tabs__title">Сб, 01.02</button>
+								<button type="button" class="schedule-tabs__title">Вс, 02.02</button>
+							</nav>
+							<div data-tabs-body class="schedule-tabs__content">
+								<div class="schedule-tabs__body">
+									<div class="schedule-block">
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Listening</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Customer service</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="schedule-tabs__body">
+									<div class="schedule-block">
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Speaking</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Culture</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+										<div class="schedule-block__item item-schedule">
+											<div class="item-schedule__header">
+												<div class="item-schedule__format-name">Listening</div>
+												<div class="item-schedule__time">15:00</div>
+											</div>
+
+											<div class="item-schedule__name">Customer service</div>
+
+											<div class="item-schedule__level">Высокий</div>
+
+										</div>
+
+									</div>
+								</div>
+								<div class="schedule-tabs__body">
+									Вміст третього таба
+								</div>
+							</div>
+						</div>
+					</div>
+				</section> -->
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

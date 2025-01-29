@@ -2,11 +2,28 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 10;
     width: 100%;
-    transition: background 0.5s;
-    &._header-scroll {
-        background-color: #522b63;
+    // transition: background 0.5s;
+
+    // .header__blur
+    &__blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition:
+            opacity 0.5s,
+            background 0.5s;
+        opacity: 0;
+        ._header-scroll & {
+            backdrop-filter: blur(12px);
+            background-color: rgba(82, 43, 99, 0.3);
+            -webkit-backdrop-filter: blur(10px);
+            opacity: 1;
+        }
     }
 
     // .header__container
@@ -35,7 +52,7 @@
     // .header__profile
     &__profile {
         justify-self: end;
-        font-size: toRem(27);
+        font-size: toRem(30);
     }
 }
 .menu {
