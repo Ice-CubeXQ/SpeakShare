@@ -30,7 +30,7 @@
 
 				</section>
 
-				<section id="promo" class="page__promo promo">
+				<!-- <section id="promo" class="page__promo promo">
 					<div class="promo__container">
 
 						<h2 data-watch data-watch-once class="promo__title">Вместе с нами</h2>
@@ -54,6 +54,35 @@
 						</div>
 						<div data-watch data-watch-once class="promo__button">
 							<button class="button">Попробовать за 5$</button>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="page__advantages advantages">
+					<div data-watch data-watch-once class="advantages__container">
+						<div class="advantages__titles">
+							<h3 class="advantages__title">Наши преимущества</h3>
+							<p class="advantages__subtitle">Мы постарались коротка рассказать вам о нас и нашем разговорном клубе!</p>
+						</div>
+						<div class="advantages__item item-advantage">
+							<h5 class="item-advantage__name"><span>&#x1F5E3;</span>Маленькие группы - больше разговорной практики!</h5>
+							<p class="item-advantage__text">Мы занимаемся в мини-группах до 5 человек, поэтому каждый получает достаточно времени, чтобы говорить, парктиковаться и получать обратную связь.</p>
+						</div>
+						<div class="advantages__item item-advantage">
+							<h5 class="item-advantage__name"><span>&#x23F3;</span>Всего час - максимум эффективности!</h5>
+							<p class="item-advantage__text">Занятие длится 60 минут и это оптимальное время для активной практики без перегрузки. Мы сосредотачиваемся на разговоре, чтобы каждый урок был продуктивным.</p>
+						</div>
+						<div class="advantages__item item-advantage">
+							<h5 class="item-advantage__name"><span>&#x1F3AF;</span>Разговорный английский без стресса</h5>
+							<p class="item-advantage__text">Наш клуб - это дружественная атмосфера, где ошибки - не преграда, а часть обучения. Вы заговорите уверенно, без страха и стеснения.</p>
+						</div>
+						<div class="advantages__item item-advantage">
+							<h5 class="item-advantage__name"><span>&#x1F4DA;</span>Темы, которые действительно полезны</h5>
+							<p class="item-advantage__text">Мы обсуждаем актуальные и живые темы, которые пригодятся в реальной жизни: путешествия, работа, хобби, общение с иностранцами.</p>
+						</div>
+						<div class="advantages__item item-advantage">
+							<h5 class="item-advantage__name"><span>&#x1F468;&#x200D;&#x1F3EB;</span>Опытные преподаватели, которые мотивируют</h5>
+							<p class="item-advantage__text">Наши преподаватели помогают раскрепоститься, дают полезные советы и корректируют речь так, чтобы вы говорили правильно и ествественно.</p>
 						</div>
 					</div>
 				</section>
@@ -133,8 +162,8 @@
 
 				<section class="page__faq faq">
 					<div class="faq__container">
-						<h3 class="faq__title">Часто задаваемые вопросы</h3>
-						<div data-spollers class="faq__spollers spollers">
+						<h3 data-watch data-watch-once class="faq__title">Часто задаваемые вопросы</h3>
+						<div data-watch data-watch-once data-spollers class="faq__spollers spollers">
 							<details class="spollers__item">
 								<summary class="spollers__title">Как быть, если я плохо знаю английский?</summary>
 								<div class="spollers__body">
@@ -163,6 +192,26 @@
 								</div>
 							</details>
 						</div>
+					</div>
+				</section>
+
+				<section data-watch class="page__contact contact">
+					<div class="contact__container">
+						<h3 class="contact__title">Остались вопросы?</h3>
+						<form data-dev data-popup-message="#form-message" action="#" method="POST" class="contact__form question-form ">
+							<h4 class="question-form__title">Задавайте!</h4>
+							<div class="question-form__item">
+								<input autocomplete="off" type="text" name="form[name]" data-validate data-required data-error="Введите имя" placeholder="Ваше имя" class="question-form__input input">
+							</div>
+							<div class="question-form__item">
+								<input autocomplete="off" type="text" name="form[email]" data-validate data-required="email" data-error="Введен не верный E-mail" placeholder="Ваш email" class="question-form__input input">
+							</div>
+							<div class="question-form__item">
+								<textarea data-autoheight autocomplete="off" name="form[question]" data-validate placeholder="Ваш вопрос" data-required data-error="Введите вопрос" class="question-form__textarea input"></textarea>
+							</div>
+
+							<button type="submit" class="question-form__button button">Отправить</button>
+						</form>
 					</div>
 				</section>
 
@@ -309,5 +358,6 @@
 		</div>
 		@@include('html/_preloader.htm',{})
 		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{})
 	</body>
 </html>

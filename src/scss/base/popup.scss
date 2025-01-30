@@ -20,7 +20,7 @@ body::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: 30px;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
@@ -47,15 +47,27 @@ body::after {
 	align-items: center;
 }
 .popup__content {
+	display: grid;
+	row-gap: toRem(15);
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
+	background-color: #ae0eab;
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 600px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
 	}
+}
+
+.popup__text {
+	text-align: center;
+	@include adaptiveValue("font-size", 25, 18);
+	font-weight: 500;
+}
+
+.popup__close {
+	justify-self: start;
 }

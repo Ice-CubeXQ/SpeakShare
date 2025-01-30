@@ -98,7 +98,7 @@ flsFunctions.tabs();
 Документация: https://template.fls.guru/template-docs/funkcional-popup.html
 Сниппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import "./libs/popup.js";
 
 /*
 Модуль пралакса мышью
@@ -113,15 +113,15 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Робота с полями форми */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
-	viewPass: false,
-	autoHeight: false
+  viewPass: false,
+  autoHeight: true,
 });
-*/
+
 /* Отправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль форми "количество" */
 // flsForms.formQuantity();
