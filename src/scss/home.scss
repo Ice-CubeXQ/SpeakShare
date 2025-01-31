@@ -21,6 +21,9 @@
         padding-top: toRem(30);
         padding-bottom: toRem(30);
     }
+    // .page__prices
+    &__prices {
+    }
     // .page__faq
     &__faq {
         padding-top: toRem(30);
@@ -34,70 +37,128 @@
 }
 //====================================================================================================
 
+// .main {
+//     position: relative;
+//     // .main__bg
+//     &__bg {
+//     }
+
+//     // .main__title
+//     &__title {
+//         position: absolute;
+//         top: 60%;
+//         left: 0;
+//         width: 100%;
+//         text-align: center;
+//         @include adaptiveValue("font-size", 35, 22);
+//         font-weight: 700;
+//     }
+// }
+// .background {
+//     padding: toRem(100);
+//     position: relative;
+//     height: 100svh;
+//     background: linear-gradient(#2b1055, #7597de);
+
+//     // .background__item
+//     &__item {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//             user-select: none;
+//             pointer-events: none;
+//         }
+
+//         // .background__item--stars
+//         &--stars {
+//         }
+//         // .background__item--moon
+//         &--moon {
+//             display: none;
+//             ._watcher-view & {
+//                 display: block;
+//             }
+//             mix-blend-mode: screen;
+//             @include adaptiveValue("min-height", 1000, 1);
+//         }
+//         // .background__item--mountains_behind
+//         &--mountains_behind {
+//         }
+//         // .background__item--mountains_front
+//         &--mountains_front {
+//         }
+//     }
+// }
+
 .main {
-    position: relative;
-    // .main__bg
-    &__bg {
-    }
-
-    // .main__title
-    &__title {
-        position: absolute;
-        top: 60%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        @include adaptiveValue("font-size", 35, 22);
-        font-weight: 700;
-    }
-}
-.background {
-    padding: toRem(100);
-    position: relative;
     height: 100svh;
-    background: linear-gradient(#2b1055, #7597de);
-
-    // .background__item
-    &__item {
-        position: absolute;
-        top: 0;
-        left: 0;
+    overflow: hidden;
+    position: relative;
+    // .main__background
+    &__background {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            user-select: none;
-            pointer-events: none;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // .main__background--img1
+        &--img1 {
+            background-image: url("../img/bg/imgm1.png");
+            z-index: 1;
         }
+        // .main__background--img2
+        &--img2 {
+            background-image: url("../img/bg/imgm2.png");
+            z-index: 2;
+        }
+        // .main__background--img3
+        &--img3 {
+            background-image: url("../img/bg/imgm3.png");
+            z-index: 3;
+        }
+        // .main__background--img4
+        &--img4 {
+            background-image: url("../img/bg/imgm4.png");
+            z-index: 3;
+        }
+    }
 
-        // .background__item--stars
-        &--stars {
-        }
-        // .background__item--moon
-        &--moon {
-            display: none;
-            ._watcher-view & {
-                display: block;
-            }
-            mix-blend-mode: screen;
-            @include adaptiveValue("min-height", 1000, 1);
-        }
-        // .background__item--mountains_behind
-        &--mountains_behind {
-        }
-        // .background__item--mountains_front
-        &--mountains_front {
-        }
+    // .main__titles
+    &__titles {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 32%;
+        z-index: 1;
+        display: grid;
+        row-gap: toRem(20);
+    }
+    // .main__title
+    &__title {
+        @include adaptiveValue("font-size", 95, 45);
+        font-weight: 700;
+    }
+    // .main__subtitle
+    &__subtitle {
+        @include adaptiveValue("font-size", 40, 20);
+        font-weight: 500;
+        text-align: center;
     }
 }
 
 //====================================================================================================
 
 .advantages {
-    background-color: #1c0522;
+    background-color: #000;
     position: relative;
     // .advantages__container
     &__container {
@@ -623,10 +684,11 @@
 .faq {
     position: relative;
     z-index: 1;
-    background-color: #1c0522;
+    background-color: #000;
 
     // .faq__container
     &__container {
+        overflow: hidden;
     }
     // .faq__title
     &__title {
@@ -750,6 +812,124 @@
         min-width: toRem(200);
         padding-top: toRem(10);
         padding-bottom: toRem(10);
+    }
+}
+
+//========================================================================================================================================================
+
+.prices {
+    // .prices__container
+    &__container {
+    }
+    // .prices__title
+    &__title {
+        @include adaptiveValue("font-size", 35, 22);
+        font-weight: 700;
+        &:not(:last-child) {
+            margin-bottom: toRem(20);
+        }
+    }
+    // .prices__info
+    &__info {
+        @include adaptiveValue("font-size", 25, 18);
+        line-height: 1.3;
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+    // .prices__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: toRem(20);
+    }
+    // .prices__item
+    &__item {
+    }
+}
+.price-item {
+    background-color: #fff;
+    border-radius: toRem(10);
+    overflow: hidden;
+
+    &--blue {
+        .price-item__header {
+            background-color: #0585b3;
+        }
+        .price-item__price {
+            outline: 10px solid #0585b3;
+        }
+    }
+    // .price-item--yellow
+    &--yellow {
+        .price-item__header {
+            background-color: #d6da06;
+        }
+        .price-item__price {
+            outline: 10px solid #d6da06;
+        }
+    }
+    &--green {
+        .price-item__header {
+            background-color: #05b305;
+        }
+        .price-item__price {
+            outline: 10px solid #05b305;
+        }
+    }
+    // .price-item__header
+    &__header {
+        padding: toRem(30) toRem(20);
+        padding-bottom: 0;
+        display: grid;
+        row-gap: toRem(20);
+    }
+    // .price-item__name
+    &__name {
+        text-align: center;
+        @include adaptiveValue("font-size", 25, 18);
+        font-weight: 700;
+    }
+    // .price-item__price
+    &__price {
+        justify-self: center;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        font-weight: 700;
+        font-size: toRem(20);
+        margin-bottom: toRem(-45);
+    }
+    // .price-item__info
+    &__info {
+        padding: toRem(70) toRem(30);
+        padding-bottom: toRem(40);
+        color: #000;
+        display: grid;
+        row-gap: toRem(15);
+        justify-items: center;
+    }
+    // .price-item__text
+    &__text {
+        @include adaptiveValue("font-size", 18, 16);
+        line-height: 1.3;
+        text-align: center;
+    }
+    // .price-item__button
+    &__button {
+    }
+    // .price-item__sale
+    &__sale {
+        padding: toRem(5) toRem(10);
+        border: 1px solid #0585b3;
+        border-radius: toRem(20);
+        font-weight: 500;
     }
 }
 

@@ -22,8 +22,8 @@ $fontFamily: "Montserrat";
 $fontSize: toRem(16); // где 14(px) - размер шрифта по умолчанию с макета
 
 // Основные цвета
-$mainColor: #f5f5f5; // Цвет шрифта по умолчанию
-$purple: #401055;
+$mainColor: #f2f2f2; // Цвет шрифта по умолчанию
+$mainBlue: #0396a6;
 
 // Палитра цветов
 // @import "base/colors-palette";
@@ -67,7 +67,7 @@ $responsiveType: 1;
 body {
 	// scrollbar-gutter: stable;
 	// Скролл заблокирован
-	background-color: #1c0522;
+	background-color: #000;
 	.lock & {
 		overflow: hidden;
 		touch-action: none;

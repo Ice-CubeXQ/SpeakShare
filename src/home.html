@@ -7,26 +7,17 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section data-watch data-prlx-parent class="page__main main">
+				<section data-prlx-parent class="page__main main">
 
-					<div data-prlx-parent class="main__bg background">
-						<div data-prlx data-axis="h" data-direction="1" data-coefficient="10" class="background__item background__item--stars">
-							<img data-prlx-mouse data-prlx-cy="400" data-prlx-cx="400" src="@img/bg/stars.png" alt="Image">
-						</div>
-						<div data-prlx data-direction="1" data-coefficient="10" class="background__item background__item--moon">
-							<img src="@img/bg/moon.png" alt="Image">
-						</div>
+					<div  class="main__background main__background--img1"></div>
+					<div class="main__background main__background--img2"></div>
+					<div class="main__background main__background--img3"></div>
+					<div class="main__background main__background--img4"></div>
 
-						<div class="background__item background__item--mountains_behind">
-							<img src="@img/bg/mountains_behind.png" alt="Image">
-						</div>
-						<div class="background__item background__item--mountains_front">
-							<img src="@img/bg/mountains_front.png" alt="Image">
-						</div>
-
+					<div  data-prlx data-direction="1" data-coefficient="20" class="main__titles">
+						<h1 class="main__title">SpeakShare</h1>
+						<span class="main__subtitle">Speaking Club</span>
 					</div>
-
-					<h1 data-prlx data-direction="1" data-coefficient="30" class="main__title">Говорите на английском свободно!</h1>
 
 				</section>
 
@@ -160,6 +151,53 @@
 					</div>
 				</section>
 
+				<section class="page__prices prices">
+					<div class="prices__container">
+						<h3 class="prices__title">Скидки до 20%</h3>
+						<div class="prices__info">После успешной оплаты количество занятий автоматически отобразится в вашем личном кабинете.</div>
+
+						<div class="prices__list">
+							<div class="prices__item price-item price-item--blue">
+								<div class="price-item__header">
+									<div class="price-item__name">1 Занятие</div>
+									<div class="price-item__price">$5</div>
+								</div>
+								<div class="price-item__info">
+									<p class="price-item__text">Отлично подходит для того чтобы попробовать.</p>
+									<button class=" price-item__button">Купить</button>
+								</div>
+							</div>
+
+							<div class="prices__item price-item price-item--yellow">
+								<div class="price-item__header">
+									<div class="price-item__name">5 Занятий</div>
+									<div class="price-item__price">$22</div>
+								</div>
+								<div class="price-item__info">
+									<div class="price-item__sale">Экономия 12%</div>
+									<p class="price-item__text">4.4$ за каждое занятие</p>
+									<button class=" price-item__button">Купить</button>
+								</div>
+							</div>
+
+							<div class="prices__item price-item price-item--green">
+								<div class="price-item__header">
+									<div class="price-item__name">10 Занятий</div>
+									<div class="price-item__price">$40</div>
+								</div>
+								<div class="price-item__info">
+									<div class="price-item__sale">Экономия 20%</div>
+									<p class="price-item__text">4$ за каждое занятие</p>
+									<button class="price-item__button">Купить</button>
+								</div>
+							</div>
+						</div>
+
+						
+					</div>
+					</div>
+				</section>
+
 				<section class="page__faq faq">
 					<div class="faq__container">
 						<h3 data-watch data-watch-once class="faq__title">Часто задаваемые вопросы</h3>
@@ -195,7 +233,7 @@
 					</div>
 				</section>
 
-				<section data-watch class="page__contact contact">
+				<section data-watch data-watch-once class="page__contact contact">
 					<div class="contact__container">
 						<h3 class="contact__title">Остались вопросы?</h3>
 						<form data-dev data-popup-message="#form-message" action="#" method="POST" class="contact__form question-form ">
