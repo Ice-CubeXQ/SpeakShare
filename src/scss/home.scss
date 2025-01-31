@@ -160,7 +160,7 @@
     // .content-block__subtitle
     &__subtitle {
         @include adaptiveValue("font-size", 22, 18);
-        color: #bdbdbd;
+        color: $subTitleColor;
     }
     // .content-block__title
     &__title {
@@ -176,7 +176,7 @@
     &__text {
         font-size: toRem(24);
         @include adaptiveValue("font-size", 24, 18);
-        color: #bdbdbd;
+        color: $subTitleColor;
     }
 }
 //========================================================================================================================================================
@@ -185,7 +185,7 @@
     // .advantages__container
     &__container {
         display: grid;
-        @include adaptiveValue("gap", 40, 15, 0, $containerWidth, 767.98);
+        @include adaptiveValue("gap", 30, 15, 0, $containerWidth, 767.98);
         @media (min-width: $mobile) {
             grid-template-columns: repeat(3, 1fr);
             @media (max-width: $tablet) {
@@ -210,7 +210,11 @@
     }
     // .advantages__title
     &__title {
-        @include adaptiveValue("font-size", 45, 25);
+        background-image: linear-gradient(to right, #00bcd4, #2196f3);
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include adaptiveValue("font-size", 55, 25);
         font-weight: 700;
         line-height: 1.2;
         &:not(:last-child) {
@@ -221,16 +225,16 @@
     &__subtitle {
         line-height: 1.2;
         @include adaptiveValue("font-size", 20, 18);
+        color: $subTitleColor;
     }
     // .advantages__item
     &__item {
     }
 }
 .item-advantage {
-    border: 3px solid #fff;
+    border: 5px solid #00bcd4;
     border-radius: toRem(15);
     padding: toRem(20);
-
     opacity: 0;
     transform: translate(0px, 50%);
     ._watcher-view & {
@@ -246,7 +250,7 @@
             margin-right: toRem(10);
             font-size: toRem(25);
         }
-        @include adaptiveValue("font-size", 20, 18);
+        @include adaptiveValue("font-size", 22, 18);
         font-weight: 500;
         line-height: 1.2;
         &:not(:last-child) {
