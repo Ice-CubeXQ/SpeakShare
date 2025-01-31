@@ -24,6 +24,8 @@ $fontSize: toRem(16); // где 14(px) - размер шрифта по умол
 // Основные цвета
 $mainColor: #f2f2f2; // Цвет шрифта по умолчанию
 $mainBlue: #0396a6;
+// $backgroundColor: #171717;
+$backgroundColor: #0a0a0a;
 
 // Палитра цветов
 // @import "base/colors-palette";
@@ -67,7 +69,7 @@ $responsiveType: 1;
 body {
 	// scrollbar-gutter: stable;
 	// Скролл заблокирован
-	background-color: #000;
+	background-color: $backgroundColor;
 	.lock & {
 		overflow: hidden;
 		touch-action: none;

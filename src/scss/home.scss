@@ -2,6 +2,11 @@
     // .page__main
     &__main {
     }
+    // .page__promo
+    &__promo {
+        // padding-top: toRem(30);
+        // padding-bottom: toRem(30);
+    }
     // .page__advantages
     &__advantages {
         padding-top: toRem(60);
@@ -11,11 +16,7 @@
             padding-bottom: toRem(30);
         }
     }
-    // .page__promo
-    // &__promo {
-    //     padding-top: toRem(30);
-    //     padding-bottom: toRem(30);
-    // }
+
     // .page__levels
     &__levels {
         padding-top: toRem(30);
@@ -35,67 +36,7 @@
         padding-bottom: toRem(30);
     }
 }
-//====================================================================================================
-
-// .main {
-//     position: relative;
-//     // .main__bg
-//     &__bg {
-//     }
-
-//     // .main__title
-//     &__title {
-//         position: absolute;
-//         top: 60%;
-//         left: 0;
-//         width: 100%;
-//         text-align: center;
-//         @include adaptiveValue("font-size", 35, 22);
-//         font-weight: 700;
-//     }
-// }
-// .background {
-//     padding: toRem(100);
-//     position: relative;
-//     height: 100svh;
-//     background: linear-gradient(#2b1055, #7597de);
-
-//     // .background__item
-//     &__item {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             user-select: none;
-//             pointer-events: none;
-//         }
-
-//         // .background__item--stars
-//         &--stars {
-//         }
-//         // .background__item--moon
-//         &--moon {
-//             display: none;
-//             ._watcher-view & {
-//                 display: block;
-//             }
-//             mix-blend-mode: screen;
-//             @include adaptiveValue("min-height", 1000, 1);
-//         }
-//         // .background__item--mountains_behind
-//         &--mountains_behind {
-//         }
-//         // .background__item--mountains_front
-//         &--mountains_front {
-//         }
-//     }
-// }
+//========================================================================================================================================================
 
 .main {
     height: 100svh;
@@ -156,10 +97,91 @@
 }
 
 //====================================================================================================
+.promo {
+    // .promo__container
+    &__container {
+        display: grid;
+    }
+    // .promo__item
+    &__item {
+        @include adaptiveValue("padding-top", 120, 30);
+        @include adaptiveValue("adding-bottom", 120, 30);
+        display: grid;
+        @media (min-width: $mobile) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: toRem(30);
+
+            &:nth-child(even) {
+                .promo__content {
+                    order: 2;
+                }
+                .promo__illustrator {
+                    order: 1;
+                }
+            }
+        }
+        row-gap: toRem(25);
+    }
+    // .promo__content
+    &__content {
+        align-self: start;
+    }
+    // .promo__illustrator
+    &__illustrator {
+        align-self: center;
+        justify-self: center;
+        img {
+            aspect-ratio: 539 / 433;
+            width: 100%;
+            height: 100%;
+        }
+
+        opacity: 0;
+        &._watcher-view {
+            transition: opacity 0.6s 0.3s;
+            opacity: 1;
+        }
+    }
+}
+
+.content-block {
+    display: grid;
+    row-gap: toRem(24);
+
+    opacity: 0;
+    transform: translate(0px, 50%);
+    &._watcher-view {
+        transition:
+            opacity 0.6s,
+            transform 0.6s;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    // .content-block__subtitle
+    &__subtitle {
+        @include adaptiveValue("font-size", 22, 18);
+        color: #bdbdbd;
+    }
+    // .content-block__title
+    &__title {
+        @include adaptiveValue("font-size", 96, 30, 0, 1920, 767.98);
+
+        opacity: 0;
+        ._watcher-view & {
+            transition: opacity 0.6s 0.3s;
+            opacity: 1;
+        }
+    }
+    // .content-block__text
+    &__text {
+        font-size: toRem(24);
+        @include adaptiveValue("font-size", 24, 18);
+        color: #bdbdbd;
+    }
+}
+//========================================================================================================================================================
 
 .advantages {
-    background-color: #000;
-    position: relative;
     // .advantages__container
     &__container {
         display: grid;
@@ -381,8 +403,6 @@
 
 //========================================================================================================================================================
 .levels {
-    position: relative;
-
     // .levels__container
     &__container {
         @media (max-width: $mobile) {
@@ -682,10 +702,6 @@
 //========================================================================================================================================================
 
 .faq {
-    position: relative;
-    z-index: 1;
-    background-color: #000;
-
     // .faq__container
     &__container {
         overflow: hidden;
